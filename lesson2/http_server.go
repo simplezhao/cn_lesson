@@ -33,14 +33,14 @@ func indexHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 //home handler
-func homeHandler(w http.ResponseWriter, r *http.Request) {
+func homeHandler(w http.ResponseWriter, _ *http.Request) {
 	log.Println("home page")
 	html := "<h1>Http Server</h1><p>hello http server</p>"
 	w.Write([]byte(html))
 }
 
 //health check handler
-func healthHandler(w http.ResponseWriter, r *http.Request) {
+func healthHandler(w http.ResponseWriter, _ *http.Request) {
 	resp := make(map[string]string)
 	resp["status"] = "ok"
 	jsonResp, err := json.Marshal(resp)
