@@ -10,3 +10,21 @@
 1. `/` home
 2. `/index` 实现要求1， 2， 3
 3. `/healthz` 实现要求4
+
+### 本地运行
+将在本地32000端口上运行
+- make build
+- make run
+
+### 使用docker运行
+#### 自行构建
+```bash
+# x86/amd64
+docker buildx build --platform=linux/amd64   -t go-httpserver:latest .
+docker run -p 80:32000 --name httpserver --rm go-httpserver:latest
+```
+#### 使用已有镜像
+```bash
+docker pull simplezhao/go-httpserver:0.3
+docker run -p 80:32000 --name httpserver --rm simplezhao/go-httpserver:0.3
+```
