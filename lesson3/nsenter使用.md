@@ -13,7 +13,7 @@
     docker run -p 80:32000 --name httpserver --rm simplezhao/go-httpserver:0.3
    ```
 4. 获取容器的PID
-    ```azure
+    ```bash
     docker inspect -f '{{.State.Pid}}' httpserver
    ```
    比如返回1961
