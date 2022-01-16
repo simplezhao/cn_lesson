@@ -7,6 +7,8 @@
 3. Server 端记录访问日志包括客户端 IP，HTTP 返回码，输出到 server 端的标准输出
 4. 当访问 localhost/healthz 时，应返回 200
 ```
+
+### lesson3
 [模块3作业](./lesson3)
 ```
 1. 构建本地镜像
