@@ -39,6 +39,10 @@
 6. 通过`docker inspect httpserver | grep IPAddress`
    IP跟nsenter获取一致
 
+
+
+* 运行httpserver
 ![运行httpserver](https://oss.smart-lifestyle.cn/file/1mbmk.png)
 
+* 查看IP ADDR
 ![nsenter查看IP](https://oss.smart-lifestyle.cn/file/s7yf4.png)
