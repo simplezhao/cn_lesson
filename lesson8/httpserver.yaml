@@ -1,7 +1,7 @@
 kind: Deployment
 apiVersion: apps/v1
 metadata:
-  name: httpserver
+  name: httpserver-test
   namespace: default
   annotations:
     deployment.kubernetes.io/revision: '2'
@@ -10,13 +10,13 @@ spec:
   replicas: 2
   selector:
     matchLabels:
-      app: httpserver
+      app: httpserver-test
       version: v1
   template:
     metadata:
       creationTimestamp: null
       labels:
-        app: httpserver
+        app: httpserver-test
         version: v1
       annotations:
         metrics.alpha.kubernetes.io/custom-endpoints: '[{"api":"","path":"","port":"","names":""}]'
