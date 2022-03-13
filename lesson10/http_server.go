@@ -11,7 +11,6 @@ import (
 
 	"github.com/prometheus/client_golang/prometheus/promhttp"
 
-	"github.com/rcrowley/go-metrics"
 	log "github.com/sirupsen/logrus"
 )
 
@@ -23,7 +22,7 @@ func init() {
 }
 
 func images(w http.ResponseWriter, r *http.Request) {
-	timer := metrics.NewTimer()
+	timer := NewTimer()
 	defer timer.ObserveTotal()
 	randInt := rand.Intn(2000)
 	time.Sleep(time.Millisecond * time.Duration(randInt))
